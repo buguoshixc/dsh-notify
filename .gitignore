@@ -1,0 +1,8 @@
+# Dependencies are never committed: the bundle ships no runtime dependencies
+# and the client half is hand-written.
+node_modules/
+
+# The plugin has no build step; these are local install/verification artifacts.
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,10 @@
+# dsh-notify bundle layer.
+#
+# `dsh plugin --profile web add link:.../dsh-notify` installs the package and
+# appends it to the profile's `dsh.profile.bundles`. This patch then mounts the
+# host-side row. The host half is intentionally empty: all behavior lives in
+# the web client bundle, which the client module graph discovers from
+# `package.json` -> `dsh.client` -> `exports["./client"]`.
+- insert:
+    - id: notify
+      name: 'dsh-notify'
